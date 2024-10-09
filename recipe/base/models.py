@@ -15,7 +15,7 @@ class Category(models.Model):
 class Recipe(models.Model):
     title = models.CharField(max_length=30)
     ingredients = models.TextField(max_length=6000)
-    instructions = models.TextField(max_length=6000)
+    instructions = models.TextField(max_length=6001)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='', height_field=None, width_field=None, max_length=100)
